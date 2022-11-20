@@ -7,10 +7,12 @@
           將逐一詢問部位 <br />
           詳細程序、須長時間
         </h1>
-        <div class="item color_r">
-          <div class="go_bk bk_r"></div>
-          逐式檢查
-        </div>
+        <router-link :to="{name: 'detailsCheck'}">
+          <div class="item color_r">
+            <div class="go_bk bk_r"></div>
+            逐式檢查
+          </div>
+        </router-link>
       </div>
       <div class="box col-5 color_b">
         <h1>
@@ -18,10 +20,12 @@
           直接選擇部位 <br />
           稍少程序、減省時間
         </h1>
-        <div class="item color_b">
-          <div class="go_bk bk_b"></div>
-          重點檢查
-        </div>
+        <router-link :to="{name: 'SelectOne'}">
+          <div class="item color_b">
+            <div class="go_bk bk_b"></div>
+            重點檢查
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
