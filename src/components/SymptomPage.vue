@@ -1,91 +1,37 @@
 <template>
     <div class="center">
         <div class="row">
-            <router-link :to="{name: 'head'}">
-                <div class="item color_r">
-                    <div class="go_bk bk_r"></div>
-                    <div class="i_img">
-                        <img src="@/assets/img/0.png">
-                    </div>
-                    <div class="i_txt">
-                        頭部
-                    </div>
-                </div>
-            </router-link>
             <div class="item color_r">
                 <div class="go_bk bk_r"></div>
                 <div class="i_img">
-                    <img src="@/assets/img/1.png">
+                    <img src="@/assets/img/12.png">
                 </div>
                 <div class="i_txt">
-                    肩頸
+                    酸
                 </div>
             </div>
-
             <div class="item color_o">
                 <div class="go_bk bk_o"></div>
                 <div class="i_img">
-                    <img src="@/assets/img/2.png">
+                    <img src="@/assets/img/13.png">
                 </div>
                 <div class="i_txt">
-                    胸部
+                    痛
                 </div>
             </div>
-
-            <div class="item color_o">
-                <div class="go_bk bk_o"></div>
+            <div class="item color_g">
+                <div class="go_bk bk_g"></div>
                 <div class="i_img">
-                    <img src="@/assets/img/3.png">
+                    <img src="@/assets/img/14.png">
                 </div>
                 <div class="i_txt">
-                    手部
+                    癢
                 </div>
             </div>
         </div>
-
         <div class="row">
-            <div class="item color_g">
-                <div class="go_bk bk_g"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/4.png">
-                </div>
-                <div class="i_txt">
-                    腹部
-                </div>
-            </div>
-
-            <div class="item color_g">
-                <div class="go_bk bk_g"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/5.png">
-                </div>
-                <div class="i_txt">
-                    腰部
-                </div>
-            </div>
-
-            <div class="item color_b">
-                <div class="go_bk bk_b"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/6.png">
-                </div>
-                <div class="i_txt">
-                    臀部
-                </div>
-            </div>
-
-            <div class="item color_b">
-                <div class="go_bk bk_b"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/7.png">
-                </div>
-                <div class="i_txt">
-                    腳部
-                </div>
-            </div>
         </div>
-
-        <div class="row gohome">
+        <div class="row">
             <div class="item color_p">
                 <div class="go_bk bk_p"></div>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt
@@ -103,19 +49,22 @@
             </div>
         </div>
     </div>
+
+    <div class="msg"></div>
+    <div class="msg_box">
+        已完成檢查
+    </div>
 </template>
 
 <script>
 import $ from "jquery";
 
 export default {
-    name: "SelectOnePage",
+    name: 'SymptomPage',
 
     mounted() {
-        // 初始畫面
         $('.center').fadeIn(1000);
-        
-        /* // 按鈕
+        /*
         function hover(x) {
             $('.item:eq(' + x + ')').find('.go_bk').fadeIn();
             $('.item:eq(' + x + ')').css({ 'color': 'rgba(255,255,255,1)' });
@@ -128,7 +77,14 @@ export default {
 
         function click(x) {
             $('.center').fadeOut();
-            setTimeout(function () { location = "so.aspx"; }, 500);
+            $('.msg').fadeIn(700);
+            $('.msg').css({ 'display': 'flex' });
+            $('.msg_box').fadeIn();
+            setTimeout(function () {
+                $('.msg_box').fadeOut();
+                $('.msg').fadeOut();
+            }, 1500);
+            setTimeout(function () { location = "index.aspx"; }, 2000);
         }
 
         function close() {
@@ -146,11 +102,11 @@ export default {
         /* margin: 130px auto; */
     }
 
-    /* .item {
+    .item {
         width: 300px;
         height: 300px;
         padding: 20px;
-    } */
+    }
 
     .i_img {
         width: 100%;
@@ -172,8 +128,8 @@ export default {
         height: 100%;
     }
 
-    /* .color_p {
+    .color_p {
         width: 500px;
         height: 100px;
-    } */
+    }
 </style>

@@ -1,91 +1,50 @@
 <template>
     <div class="center">
         <div class="row">
-            <router-link :to="{name: 'head'}">
+            <router-link :to="{name: 'symptom'}">
                 <div class="item color_r">
                     <div class="go_bk bk_r"></div>
                     <div class="i_img">
-                        <img src="@/assets/img/0.png">
+                        <img src="@/assets/img/8.png">
                     </div>
                     <div class="i_txt">
-                        頭部
+                        眼睛
                     </div>
                 </div>
             </router-link>
-            <div class="item color_r">
-                <div class="go_bk bk_r"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/1.png">
-                </div>
-                <div class="i_txt">
-                    肩頸
-                </div>
-            </div>
-
             <div class="item color_o">
                 <div class="go_bk bk_o"></div>
                 <div class="i_img">
-                    <img src="@/assets/img/2.png">
+                    <img src="@/assets/img/9.png">
                 </div>
                 <div class="i_txt">
-                    胸部
+                    鼻子
                 </div>
             </div>
-
-            <div class="item color_o">
-                <div class="go_bk bk_o"></div>
+            <div class="item color_g">
+                <div class="go_bk bk_g"></div>
                 <div class="i_img">
-                    <img src="@/assets/img/3.png">
+                    <img src="@/assets/img/10.png">
                 </div>
                 <div class="i_txt">
-                    手部
+                    嘴巴
+                </div>
+            </div>
+            <div class="item color_b">
+                <div class="go_bk bk_b"></div>
+                <div class="i_img">
+                    <img src="@/assets/img/11.png">
+                </div>
+                <div class="i_txt">
+                    耳朵
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="item color_g">
-                <div class="go_bk bk_g"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/4.png">
-                </div>
-                <div class="i_txt">
-                    腹部
-                </div>
-            </div>
-
-            <div class="item color_g">
-                <div class="go_bk bk_g"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/5.png">
-                </div>
-                <div class="i_txt">
-                    腰部
-                </div>
-            </div>
-
-            <div class="item color_b">
-                <div class="go_bk bk_b"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/6.png">
-                </div>
-                <div class="i_txt">
-                    臀部
-                </div>
-            </div>
-
-            <div class="item color_b">
-                <div class="go_bk bk_b"></div>
-                <div class="i_img">
-                    <img src="@/assets/img/7.png">
-                </div>
-                <div class="i_txt">
-                    腳部
-                </div>
-            </div>
         </div>
 
-        <div class="row gohome">
+        <div class="row">
             <div class="item color_p">
                 <div class="go_bk bk_p"></div>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt
@@ -109,13 +68,11 @@
 import $ from "jquery";
 
 export default {
-    name: "SelectOnePage",
+    name: 'HeadPage',
 
     mounted() {
-        // 初始畫面
         $('.center').fadeIn(1000);
-        
-        /* // 按鈕
+        /*
         function hover(x) {
             $('.item:eq(' + x + ')').find('.go_bk').fadeIn();
             $('.item:eq(' + x + ')').css({ 'color': 'rgba(255,255,255,1)' });
@@ -128,7 +85,7 @@ export default {
 
         function click(x) {
             $('.center').fadeOut();
-            setTimeout(function () { location = "so.aspx"; }, 500);
+            setTimeout(function () { location = "se.aspx"; }, 500);
         }
 
         function close() {
@@ -136,21 +93,21 @@ export default {
             $('.item').find('.go_bk').fadeOut(300);
         }*/
     }
-}
+};
 </script>
 
 <style>
     .row {
         justify-content: space-around;
         align-items: center;
-        /* margin: 130px auto; */
+        margin: 130px auto;
     }
 
-    /* .item {
+    .item {
         width: 300px;
         height: 300px;
         padding: 20px;
-    } */
+    }
 
     .i_img {
         width: 100%;
@@ -172,8 +129,8 @@ export default {
         height: 100%;
     }
 
-    /* .color_p {
+    .color_p {
         width: 500px;
         height: 100px;
-    } */
+    }
 </style>

@@ -109,7 +109,7 @@ export default {
         width: 90%;
     }
 
-    .row {
+    /* .row {
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -122,5 +122,5 @@ export default {
         padding: 10px 100px;
         border-top: none;
         border-bottom: 2px solid rgba(200, 200, 200, .5);
-    }
+    } */
 </style>

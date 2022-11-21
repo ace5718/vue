@@ -20,7 +20,7 @@
           直接選擇部位 <br />
           稍少程序、減省時間
         </h1>
-        <router-link :to="{name: 'SelectOne'}">
+        <router-link :to="{name: 'selectOne'}">
           <div class="item color_b">
             <div class="go_bk bk_b"></div>
             重點檢查
