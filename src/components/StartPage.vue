@@ -2,12 +2,12 @@
         <div class="center">          
             <div class="start">
                 <h1>病情診斷調查</h1>
-                <router-link :to="{name: 'select'}">
+                <!-- <router-link :to="{name: 'select'}"> -->
                   <div class="go color_p">
                       Start
                       <div class="go_bk bk_p"></div>
                   </div>
-                </router-link>
+                <!-- </router-link> -->
             </div>
                        
             <div class="out">
